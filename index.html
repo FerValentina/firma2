@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body >
+   <table cellpadding="5" cellspacing="5" style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; padding: 10px; ">
+        <tr>
+            <td style="vertical-align: middle; padding-right: 20px; border-right: 3px solid #00597B;">
+                <img src="assets/img/logo.png" alt="Logo" width="150" style="display: block;">
+            </td>
+            <td style="vertical-align: top; font-size: 10px; color: #000000; padding-left: 25px;">
+                <h1 id="name" style="color: #00597B; font-size: 15px; margin: 0; margin-bottom: 2px;">Nombre Apellido</h1>
+                <h3 id="title" style="font-size: 12px; margin: 0; color: #000000;">Cargo en la empresa</h3>
+                <div style="padding: 10px 20px 0 20px;">
+            <img src="https://raw.githubusercontent.com/FerValentina/firma/refs/heads/main/assets/telefno.jpg" width="16" style="vertical-align: middle; padding-bottom: 2px;"> <span id="phone"> +56 9 1234 5678</span><br>
+            <img src="https://raw.githubusercontent.com/FerValentina/firma/refs/heads/main/assets/email.jpg" width="16" style="vertical-align: middle;padding-bottom: 2px;"> <span id="email"> nombre@dumas.cl</span><br>
+            <img src="https://raw.githubusercontent.com/FerValentina/firma/refs/heads/main/assets/localiz.jpg" width="16" style="vertical-align: middle;"> Encomenderos 113, Of. 901, Las Condes <br>
+        </div>
+          </td>
+        </tr>
+      </table>
+          <script>
+        function updateSignature() {
+            // Prompt for user inputs
+            const name = prompt("Ingrese su nombre completo:") || "Nombre Apellido";
+            const title = prompt("Ingrese su cargo:") || "Cargo en la empresa";
+            const phone = prompt("Ingrese su número de teléfono:") || "+56 9 1234 5678";
+            const email = prompt("Ingrese su correo electrónico:") || "nombre@dumas.cl";
+
+            // Update DOM elements with user inputs
+            document.getElementById("name").textContent = name;
+            document.getElementById("title").textContent = title;
+            document.getElementById("phone").textContent = phone;
+            document.getElementById("email").textContent = email;
+        }
+
+        // Run updateSignature when the page loads
+        window.onload = updateSignature;
+    </script>
+</body>
+</html>
+
